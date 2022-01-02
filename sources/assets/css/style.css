@@ -167,12 +167,24 @@ header .user-settings .cart-button {
     top: 0;
     right: 0;
     padding: 0 40px 0 10px;
-    background-color: #656464;
+    background-color: rgb(202, 202, 202);
+    height: 36px;
+    text-transform: uppercase;
 }
 
 .log-button:hover #connexion-rollover {
     display: block;
+    color: white;
 }
+
+.log-button:hover #connexion-rollover.logged-in {
+  background-color: rgb(202, 202, 202);
+  color: white;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+
 
 #connexion-rollover:before {
     content: "";
@@ -221,6 +233,7 @@ header .user-settings .cart-button {
     width: 100%;
     background-color: #fff;
     text-indent: .5rem;
+    outline: none;
 }
 
 #connexion-rollover .form-line button {
@@ -404,4 +417,18 @@ footer p {
 footer img {
     height: 20px;
     vertical-align: middle;
+}
+
+.form-line button:disabled {
+  opacity: 0.5;
+}
+
+.valid-email {
+  border: 4px solid rgb(36, 238, 36);
+  border-radius: 5px;
+}
+
+.invalid-email {
+  border: 4px solid red;
+  border-radius: 5px;
 }
