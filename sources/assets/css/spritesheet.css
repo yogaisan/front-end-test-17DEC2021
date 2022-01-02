@@ -1,17 +1,17 @@
-.wrapper-rassurance {
-  display: flex;
-}
-
 .sprite {
     background-image: url(../img/spritesheet.png);
     background-repeat: no-repeat;
     display: block;
+    margin: 0 auto;
 }
 
 .sprite-footer_01 {
     width: 24px;
     height: 24px;
     background-position: 0 0;
+    position: absolute;
+    top: 20px;
+    left: -30px;
 }
 
 .sprite-footer_02 {
@@ -71,11 +71,51 @@
 .sprite-footer-item {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  position: relative;
+  font-size: 11px;
+  border-right: 2px solid white;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(140, 140, 140);
+  padding-top: 20px;
   flex: 1;
-  width: 120px;
-  background-color: white;
-  font-size: 10px;
-  margin: 10px 5px;
+}
+
+.sprite-footer-item:first-child {
+  background-color: rgb(120, 120, 120);
+  color: rgb(255, 255, 255, 0.9);
+  padding-left: 30px;
+  padding-top: 5px;
+  align-items: flex-start;
+  text-align: justify;
+  flex-grow: 1.2;
+  border: none;
+}
+
+#caret-one {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  border: 5px solid transparent;
+  border-left-color: white;
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+
+#caret-two {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  border: 5px solid transparent;
+  border-left-color: rgb(120, 120, 120);
+  position: absolute;
+  top: 20px;
+  left: 0px;
+}
+
+.sprite-footer-item:first-child span {
+  letter-spacing: 1.2px;
 }
